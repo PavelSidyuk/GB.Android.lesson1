@@ -70,24 +70,19 @@ class Phonebook {
    static String infoAdd;
    static String getInfo;
 
-    public Phonebook(String infoAdd) {
-        this.infoAdd = infoAdd;
-    }
 
-    public Phonebook() {
 
-    }
 
     public  void add(String surname, String number) {
 
         if (!phonebook.containsKey(number)) {
             phonebook.put(number, surname);
             infoAdd = "Абонент добавлен!!!";
-            // System.out.println("добавлено " + number + surname); // использую для отладки
+
 
         } else {
-            // System.out.println("ошибка"); // использую для отладки
-            infoAdd = "Абонент с таким номером существует ";
+
+            infoAdd = "Абонент с таким номером существует";
         }
 
     }
